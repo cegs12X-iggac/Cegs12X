@@ -87,6 +87,45 @@
         "GR FTCs are raised"
       ]
     },
+    "Graphite Precondition": {
+      "Name": "Graphite Precondition",
+      "PortType": "Combustion",
+      "Steps": [
+        {
+          "Name": "Flush Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Evacuate Inlet Port",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 500,
+          "Minutes": 90,
+          "AdmitO2": true,
+          "OpenLine": true,
+          "WaitForSetpoint": false,
+          "Name": "Pre-Burn",
+          "Description": ""
+        },
+        {
+          "Name": "Turn off IP furnaces",
+          "Description": ""
+        },
+        {
+          "Name": "Discard IP gases",
+          "Description": ""
+        },
+        {
+          "Name": "Open and evacuate line",
+          "Description": ""
+        }
+      ],
+      "CheckList": [
+        "Combustion Chamber furnaces are raised"
+      ]
+    },
     "Oxalic Acid": {
       "Name": "Oxalic Acid",
       "Description": "",
@@ -168,8 +207,8 @@
         },
         {
           "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
-          "Temperature": 625,
-          "Minutes": 45,
+          "Temperature": 700,
+          "Minutes": 50,
           "AdmitO2": true,
           "WaitForSetpoint": true,
           "Name": "Combust",
@@ -421,6 +460,331 @@
         "GR FTCs are raised"
       ]
     },
+    "IAEA C3-1": {
+      "Name": "IAEA C3-1",
+      "PortType": "Combustion",
+      "Steps": [
+        {
+          "Name": "Flush Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Admit O2 into Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Heat Quartz and Open Line",
+          "Description": ""
+        },
+        {
+          "Name": "Discard IP gases",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 150,
+          "Minutes": 15,
+          "AdmitO2": true,
+          "OpenLine": true,
+          "WaitForSetpoint": false,
+          "Name": "Pre-Burn",
+          "Description": ""
+        },
+        {
+          "Name": "Discard IP gases",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 850,
+          "Minutes": 45,
+          "AdmitO2": true,
+          "OpenLine": true,
+          "WaitForSetpoint": true,
+          "Name": "Combust",
+          "Description": ""
+        },
+        {
+          "Name": "Turn off IP furnaces",
+          "Description": ""
+        },
+        {
+          "Name": "Collect, etc.",
+          "Description": ""
+        },
+        {
+          "Name": "Open and evacuate line",
+          "Description": ""
+        }
+      ],
+      "CheckList": [
+        "Combustion Chamber furnaces are raised",
+        "GR furnaces are lowered",
+        "GR FTCs are raised",
+        "Say good luck"
+      ]
+    },
+    "Background": {
+      "Name": "Background",
+      "PortType": "Combustion",
+      "Steps": [
+        {
+          "Name": "Flush Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Admit O2 into Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Heat Quartz and Open Line",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 450,
+          "Minutes": 15,
+          "AdmitO2": false,
+          "OpenLine": false,
+          "WaitForSetpoint": true,
+          "Name": "Combust",
+          "Description": ""
+        },
+        {
+          "Name": "Turn off IP furnaces",
+          "Description": ""
+        },
+        {
+          "Name": "Collect, etc.",
+          "Description": ""
+        },
+        {
+          "Name": "Open and evacuate line",
+          "Description": ""
+        }
+      ],
+      "CheckList": [
+        "Combustion Chamber furnaces are raised",
+        "GR furnaces are lowered",
+        "GR FTCs are raised"
+      ]
+    },
+    "Wood1": {
+      "Name": "Wood1",
+      "PortType": "Combustion",
+      "Steps": [
+        {
+          "Name": "Flush Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Admit O2 into Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Heat Quartz and Open Line",
+          "Description": ""
+        },
+        {
+          "Name": "Discard IP gases",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 150,
+          "Minutes": 15,
+          "AdmitO2": true,
+          "OpenLine": true,
+          "WaitForSetpoint": false,
+          "Name": "Pre-Burn",
+          "Description": ""
+        },
+        {
+          "Name": "Discard IP gases",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 850,
+          "Minutes": 300,
+          "AdmitO2": true,
+          "OpenLine": true,
+          "WaitForSetpoint": true,
+          "Name": "Combust",
+          "Description": ""
+        },
+        {
+          "Name": "Turn off IP furnaces",
+          "Description": ""
+        },
+        {
+          "Name": "Collect, etc.",
+          "Description": ""
+        },
+        {
+          "Name": "Open and evacuate line",
+          "Description": ""
+        }
+      ],
+      "CheckList": [
+        "Combustion Chamber furnaces are raised",
+        "GR furnaces are lowered",
+        "GR FTCs are raised"
+      ]
+    },
+    "Coal": {
+      "Name": "Coal",
+      "PortType": "Combustion",
+      "Steps": [
+        {
+          "Name": "Flush Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Admit O2 into Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Heat Quartz and Open Line",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 850,
+          "Minutes": 50,
+          "AdmitO2": false,
+          "OpenLine": false,
+          "WaitForSetpoint": true,
+          "Name": "Combust",
+          "Description": ""
+        },
+        {
+          "Name": "Turn off IP furnaces",
+          "Description": ""
+        },
+        {
+          "Name": "Collect, etc.",
+          "Description": ""
+        },
+        {
+          "Name": "Open and evacuate line",
+          "Description": ""
+        }
+      ],
+      "CheckList": [
+        "Combustion Chamber furnaces are raised",
+        "GR furnaces are lowered",
+        "GR FTCs are raised"
+      ]
+    },
+    "Wood4": {
+      "Name": "Wood4",
+      "PortType": "Combustion",
+      "Steps": [
+        {
+          "Name": "Flush Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Admit O2 into Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Heat Quartz and Open Line",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 850,
+          "Minutes": 120,
+          "AdmitO2": false,
+          "OpenLine": false,
+          "WaitForSetpoint": true,
+          "Name": "Combust",
+          "Description": ""
+        },
+        {
+          "Name": "Turn off IP furnaces",
+          "Description": ""
+        },
+        {
+          "Name": "Collect, etc.",
+          "Description": ""
+        },
+        {
+          "Name": "Open and evacuate line",
+          "Description": ""
+        }
+      ],
+      "CheckList": [
+        "Combustion Chamber furnaces are raised",
+        "GR furnaces are lowered",
+        "GR FTCs are raised"
+      ]
+    },
+    "Collagen": {
+      "Name": "Collagen",
+      "PortType": "Combustion",
+      "Steps": [
+        {
+          "Name": "Flush Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Admit O2 into Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Heat Quartz and Open Line",
+          "Description": ""
+        },
+        {
+          "Name": "Discard IP gases",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 150,
+          "Minutes": 15,
+          "AdmitO2": true,
+          "OpenLine": true,
+          "WaitForSetpoint": false,
+          "Name": "Pre-Burn",
+          "Description": ""
+        },
+        {
+          "Name": "Discard IP gases",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
+          "Temperature": 700,
+          "Minutes": 45,
+          "AdmitO2": true,
+          "OpenLine": true,
+          "WaitForSetpoint": true,
+          "Name": "Combust",
+          "Description": ""
+        },
+        {
+          "Name": "Turn off IP furnaces",
+          "Description": ""
+        },
+        {
+          "Name": "Collect, etc.",
+          "Description": ""
+        },
+        {
+          "Name": "Open and evacuate line",
+          "Description": ""
+        }
+      ],
+      "CheckList": [
+        "Combustion Chamber furnaces are raised",
+        "GR furnaces are lowered",
+        "GR FTCs are raised"
+      ]
+    },
     "Carbonate (close IP at 5 Torr)": {
       "Name": "Carbonate (close IP at 5 Torr)",
       "Description": "",
@@ -462,32 +826,33 @@
       "LogEverything": false,
       "Devices": {
         "do0": "pVM_IG.Enable",
-        "do1": "fan3",
-        "do2": "fan1",
+        "do1": "fan4",
+        "do2": "fan3",
         "do3": "fan2",
-        "do4": "fan4",
+        "do4": "fan1",
         "ai0": "pMC",
+        "ai1": "DC15VPower",
         "ai2": "pCT",
+        "ai97": "pVM_LP",
         "ai3": "pVM_IG",
-        "ai96": "pVM_LP",
+        "ai123": "DC5VPower",
         "ai104": "pGR6",
         "ai105": "pGR5",
         "ai106": "pGR4",
         "ai107": "pGR3",
         "ai108": "pGR2",
         "ai109": "pGR1",
-        "ai110": "pGR12",
-        "ai111": "pGR11",
-        "ai112": "pGR10",
-        "ai113": "pGR9",
-        "ai114": "pGR8",
-        "ai115": "pGR7",
-        "ai116": "tMC",
-        "ai117": "pGM",
-        "ai118": "pIM",
-        "ai119": "pForeline",
-        "ai120": "pVM_GP",
-        "ai123": "DC5VPower",
+        "ai110": "pGR10",
+        "ai111": "pGR9",
+        "ai112": "pGR8",
+        "ai113": "pGR7",
+        "ai114": "pGR12",
+        "ai115": "pGR11",
+        "ai116": "pGM",
+        "ai117": "pIM",
+        "ai118": "tMC",
+        "ai119": "pVM_GP",
+        "ai120": "pForeline",
         "ai124": "DC5VMainsDetect",
         "ai125": "pAmbient",
         "ai126": "tAmbient",
@@ -533,27 +898,27 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 250,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": 1000
       },
       "IdleTimeout": -1,
       "LogEverything": false,
       "Devices": {
-        "h0": "hIP12CCS",
-        "h1": "hIP12CCQ",
-        "h2": "hIP11CCS",
-        "h3": "hIP11CCQ",
-        "h4": "hIP10CCS",
-        "h5": "hIP10CCQ",
-        "t0": "tIP12CCS",
-        "t2": "tIP11CCS",
-        "t4": "tIP10CCS",
-        "t6": "tGML",
-        "t7": "tLNManifold1",
-        "t8": "tLN_GR6",
-        "t9": "tLN_GR5",
-        "t10": "tLN_GR2",
-        "t11": "tLN_GR3"
+        "h0": "hIP3CCS",
+        "h1": "hIP3CCQ",
+        "h2": "hIP2CCS",
+        "h3": "hIP2CCQ",
+        "h4": "hIP1CCS",
+        "h5": "hIP1CCQ",
+        "t0": "tIP3CCS",
+        "t2": "tIP2CCS",
+        "t4": "tIP1CCS",
+        "t6": "tLN_GR4",
+        "t7": "tLN_GR2",
+        "t8": "tLN_GR5",
+        "t9": "tLN_GR1",
+        "t10": "tGML",
+        "t11": "tGMR"
       }
     },
     "HeaterController2": {
@@ -595,27 +960,27 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 250,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": 1000
       },
       "IdleTimeout": -1,
       "LogEverything": false,
       "Devices": {
-        "h0": "hIP9CCS",
-        "h1": "hIP9CCQ",
-        "h2": "hIP8CCS",
-        "h3": "hIP8CCQ",
-        "h4": "hIP7CCS",
-        "h5": "hIP7CCQ",
-        "t0": "tIP9CCS",
-        "t2": "tIP8CCS",
-        "t4": "tIP7CCS",
-        "t6": "tGMR",
-        "t7": "tLNOverflow",
-        "t8": "tLN_GR12",
-        "t9": "tLNManifold2",
-        "t10": "tLN_GR1",
-        "t11": "tLN_GR4"
+        "h0": "hIP6CCS",
+        "h1": "hIP6CCQ",
+        "h2": "hIP5CCS",
+        "h3": "hIP5CCQ",
+        "h4": "hIP4CCS",
+        "h5": "hIP4CCQ",
+        "t0": "tIP6CCS",
+        "t2": "tIP5CCS",
+        "t4": "tIP4CCS",
+        "t6": "tLN_GR9",
+        "t7": "tLN_GR8",
+        "t8": "tLN_GR7",
+        "t9": "tLNManifold1",
+        "t10": "tLN_GR6",
+        "t11": "tLN_GR3"
       }
     },
     "HeaterController3": {
@@ -657,26 +1022,27 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 250,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": 1000
       },
       "IdleTimeout": -1,
       "LogEverything": false,
       "Devices": {
-        "h0": "hIP6CCS",
-        "h1": "hIP6CCQ",
-        "h2": "hIP5CCS",
-        "h3": "hIP5CCQ",
-        "h4": "hIP4CCS",
-        "h5": "hIP4CCQ",
-        "t0": "tIP6CCS",
-        "t2": "tIP5CCS",
-        "t4": "tIP4CCS",
-        "t6": "tLN_GR11",
-        "t7": "tLN_GR10",
-        "t8": "tLN_GR9",
-        "t9": "tLN_GR8",
-        "t10": "tLN_GR7"
+        "h0": "hIP9CCS",
+        "h1": "hIP9CCQ",
+        "h2": "hIP8CCS",
+        "h3": "hIP8CCQ",
+        "h4": "hIP7CCS",
+        "h5": "hIP7CCQ",
+        "t0": "tIP9CCS",
+        "t2": "tIP8CCS",
+        "t4": "tIP7CCS",
+        "t6": "tLN_VTT",
+        "t7": "tVTC_top",
+        "t8": "tVTC_wire",
+        "t9": "tLN_MC",
+        "t10": "tLN_CT",
+        "t11": "tLNManifold2"
       }
     },
     "HeaterController4": {
@@ -718,21 +1084,21 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 250,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": 1000
       },
       "IdleTimeout": -1,
       "LogEverything": false,
       "Devices": {
-        "h0": "hIP3CCS",
-        "h1": "hIP3CCQ",
-        "h2": "hIP2CCS",
-        "h3": "hIP2CCQ",
-        "h4": "hIP1CCS",
-        "h5": "hIP1CCQ",
-        "t0": "tIP3CCS",
-        "t2": "tIP2CCS",
-        "t4": "tIP1CCS"
+        "h0": "hIP12CCS",
+        "h1": "hIP12CCQ",
+        "h2": "hIP11CCS",
+        "h3": "hIP11CCQ",
+        "h4": "hIP10CCS",
+        "h5": "hIP10CCQ",
+        "t0": "tIP12CCS",
+        "t2": "tIP11CCS",
+        "t4": "tIP10CCS"
       }
     },
     "HeaterController5": {
@@ -774,7 +1140,7 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 250,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": 1000
       },
       "IdleTimeout": -1,
@@ -833,7 +1199,7 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 250,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": 1000
       },
       "IdleTimeout": -1,
@@ -892,19 +1258,18 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 250,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": 1000
       },
       "IdleTimeout": -1,
       "LogEverything": false,
       "Devices": {
-        "h0": "hVTC",
-        "t0": "tVTC",
-        "t6": "tLN_VTT",
-        "t7": "tVTC_top",
-        "t8": "tVTC_wire",
-        "t9": "tLN_MC",
-        "t10": "tLN_CT"
+        "h4": "hVTC",
+        "t0": "tLnOverflow",
+        "t1": "tLN_GR10",
+        "t2": "tLN_GR11",
+        "t3": "tLN_GR12",
+        "t4": "tVTC"
       }
     },
     "ActuatorController1": {
@@ -918,7 +1283,7 @@
         "SerialDevice": {
           "RtsMode": "Enabled",
           "PortSettings": {
-            "PortName": "COM6",
+            "PortName": "COM5",
             "BaudRate": 115200,
             "Parity": "None",
             "DataBits": 8,
@@ -947,7 +1312,7 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 90,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": -1
       },
       "SerialController": {
@@ -956,7 +1321,7 @@
         "SerialDevice": {
           "RtsMode": "Enabled",
           "PortSettings": {
-            "PortName": "COM7",
+            "PortName": "COM6",
             "BaudRate": 115200,
             "Parity": "None",
             "DataBits": 8,
@@ -985,62 +1350,62 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 200,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": -1
       },
       "IdleTimeout": -1,
       "LogEverything": false,
       "Devices": {
-        "0": "vHe_VM",
-        "2": "vCO2Flow",
-        "1": "vH2Flow",
-        "3": "vHeFlow",
-        "4": "vIP5_IML",
-        "5": "vIP6_IML",
-        "6": "vIML_IMC",
-        "7": "vCTFlow",
-        "8": "vHV",
-        "9": "vB",
-        "10": "vR",
-        "26": "vCO2_VM",
-        "12": "vIP2_IML",
-        "13": "vIP3_IML",
-        "14": "vIP4_IML",
-        "15": "vCT_VM",
-        "16": "vCT_VTT",
-        "17": "vO2_VM",
-        "18": "vMC_MCP2",
-        "19": "vMC_MCP1",
-        "20": "vIP1_IML",
+        "0": "vLV",
+        "1": "vMC_Split",
+        "2": "vHV",
+        "3": "vVTT_MC",
+        "4": "vCTFlow",
+        "5": "vIML_IMC",
+        "6": "vIMC_VM",
+        "7": "vIMR_IMC",
+        "8": "vO2_VM",
+        "9": "vHe_VM",
+        "10": "vH2_VM",
+        "11": "vCO2_VM",
+        "12": "vIP4_IML",
+        "13": "vCT_VM",
+        "14": "vIP5_IML",
+        "15": "vIP6_IML",
+        "16": "vH2Flow",
+        "17": "vCO2Flow",
+        "18": "vR",
+        "19": "vB",
+        "20": "vIP2_IML",
         "21": "vIP10_IMR",
         "22": "vIP11_IMR",
         "23": "vIP12_IMR",
-        "24": "vVTT_MC",
-        "25": "vMC_Split",
-        "11": "vH2_VM",
-        "27": "vLV",
+        "24": "vCT_VTT",
+        "25": "vMC_MCP1",
+        "26": "vMC_MCP2",
+        "27": "vHeFlow",
         "28": "vIMC_CT",
         "29": "vIP7_IMR",
-        "30": "vIMC_VM",
-        "31": "vIMR_IMC",
+        "30": "vIP8_IMR",
+        "31": "vIP9_IMR",
         "32": "vGR7_GMR",
         "33": "vGR8_GMR",
         "34": "vGR9_GMR",
         "35": "vGR10_GMR",
         "36": "vGR11_GMR",
         "37": "vGR12_GMR",
-        "38": "vIP8_IMR",
-        "39": "vIP9_IMR",
-        "40": "vGR4_GML",
-        "41": "vGR5_GML",
-        "42": "vGR6_GML",
-        "43": "vSplit_GMC",
-        "44": "vGML_GMC",
-        "45": "vGR1_GML",
-        "46": "vGMC_VM",
-        "47": "vGMR_GMC",
-        "48": "vGR2_GML",
-        "49": "vGR3_GML"
+        "38": "vIP1_IML",
+        "39": "vIP3_IML",
+        "40": "vGMR_GMC",
+        "41": "vGMC_VM",
+        "42": "vGR3_GML",
+        "43": "vGR4_GML",
+        "44": "vGR5_GML",
+        "45": "vGR6_GML",
+        "46": "vSplit_GMC",
+        "47": "vGML_GMC",
+        "48": "vGR1_GML",
+        "49": "vGR2_GML"
       }
     },
     "ActuatorController2": {
@@ -1127,24 +1492,24 @@
       "IdleTimeout": -1,
       "LogEverything": false,
       "Devices": {
-        "0": "vLN_MC",
-        "1": "vLN_GR10",
-        "2": "vLN_GR9",
-        "3": "vLN_GR8",
-        "4": "vLN_GR7",
-        "5": "vLN_GR2",
+        "0": "vLN_CT",
+        "1": "vLN_GR12",
+        "2": "vLN_GR10",
+        "3": "vLN_GR9",
+        "4": "vLN_MC",
+        "5": "vLN_GR11",
         "6": "vLN_GR1",
         "7": "vLN_Spare3",
-        "8": "vLN_Spare2",
-        "9": "vLN_GR12",
-        "10": "vLN_VTT",
-        "11": "vLN_CT",
-        "12": "vLN_GR11",
-        "13": "vLN_GR6",
-        "14": "vLN_GR5",
-        "15": "vLN_GR4",
-        "16": "vLN_GR3",
-        "17": "vLN_Spare1"
+        "8": "vLN_GR7",
+        "9": "vLN_VTT",
+        "10": "vLN_GR8",
+        "11": "vLN_GR6",
+        "12": "vLN_GR2",
+        "13": "vLN_Spare2",
+        "14": "vLN_GR3",
+        "15": "vLN_Spare1",
+        "16": "vLN_GR5",
+        "17": "vLN_GR4"
       }
     },
     "SwitchBank": {
@@ -1158,7 +1523,7 @@
         "SerialDevice": {
           "RtsMode": "Enabled",
           "PortSettings": {
-            "PortName": "COM5",
+            "PortName": "COM7",
             "BaudRate": 115200,
             "Parity": "None",
             "DataBits": 8,
@@ -1187,30 +1552,30 @@
         "TokenizeCommands": true,
         "IgnoreUnexpectedResponses": true,
         "ResponseTimeout": 200,
-        "TooManyResponseTimeouts": 5,
+        "TooManyResponseTimeouts": 10,
         "IdleTimeout": -1
       },
       "IdleTimeout": -1,
       "LogEverything": false,
       "Devices": {
-        "0": "vAir_Spare2",
-        "1": "vAir_Spare3",
-        "2": "vAir_GR1",
-        "3": "vAir_GR2",
-        "8": "vAir_Spare1",
-        "9": "vAir_GR3",
+        "0": "vAir_Spare1",
+        "1": "vAir_Spare2",
+        "2": "vAir_Spare3",
+        "3": "vAir_GR1",
+        "8": "vAir_GR3",
+        "9": "vAir_GR7",
         "10": "vAir_GR4",
         "11": "vAir_GR8",
         "12": "vAir_GR5",
         "13": "vAir_GR9",
-        "14": "vAir_GR10",
-        "15": "vAir_GR6",
-        "16": "vAir_GR7",
-        "17": "vAir_MC",
-        "18": "vAir_GR11",
-        "19": "vAir_CT",
-        "20": "vAir_VTT",
-        "21": "vAir_GR12",
+        "14": "vAir_GR6",
+        "15": "vAir_GR2",
+        "16": "vAir_MC",
+        "17": "vAir_GR11",
+        "18": "vAir_CT",
+        "19": "vAir_VTT",
+        "20": "vAir_GR12",
+        "21": "vAir_GR10",
         "22": "vLNSupply1",
         "23": "vLNSupply2"
       }
@@ -1333,7 +1698,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x+-0"
+            "Argument": "x-0.006916574364743301"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -1381,7 +1746,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x+-0"
+            "Argument": "x+0.039455304723228696"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -1429,12 +1794,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.5150929786427506"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*392.6641"
           }
         ]
       },
@@ -1477,12 +1842,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.48916699789420215"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*389.9399"
           }
         ]
       },
@@ -1525,12 +1890,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.48236139105357906"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*392.6444"
           }
         ]
       },
@@ -1573,12 +1938,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.5050696754847244"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*393.3304"
           }
         ]
       },
@@ -1760,12 +2125,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.5194087141755191"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*393.2531669512961"
           }
         ]
       },
@@ -1802,12 +2167,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.5401072822314525"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*395.22358118762554"
           }
         ]
       },
@@ -1844,12 +2209,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.48560112213388246"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*392.6087277424426"
           }
         ]
       },
@@ -1886,12 +2251,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.44111598514221484"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*393.0893950367953"
           }
         ]
       },
@@ -1928,12 +2293,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.5056931007954475"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*404.35801912661094"
           }
         ]
       },
@@ -1970,12 +2335,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.4731044291256397"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*392.0856466268777"
           }
         ]
       },
@@ -2012,12 +2377,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.4972892225468847"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*392.7964873516707"
           }
         ]
       },
@@ -2054,12 +2419,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.4818032221635957"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*392.2140248721075"
           }
         ]
       },
@@ -2138,12 +2503,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.4824021071671881"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*393.01393224566385"
           }
         ]
       },
@@ -2180,12 +2545,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.4229775159349601"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*392.7252568554431"
           }
         ]
       },
@@ -2222,12 +2587,12 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Argument": "x-0.4706227341390712"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*393.67908053990203"
           }
         ]
       },
@@ -2269,7 +2634,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "Gain",
-            "Argument": "x*385"
+            "Argument": "x*400.0453"
           }
         ]
       },
@@ -2306,7 +2671,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.4"
+            "Argument": "x-0.432"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2350,19 +2715,19 @@
             "Name": "Interpolate",
             "CalibrationData": [
               {
-                "Item1": 0.737,
+                "Item1": 0.721,
                 "Item2": 15.0
               },
               {
-                "Item1": 0.83,
+                "Item1": 0.803,
                 "Item2": 20.0
               },
               {
-                "Item1": 0.941,
+                "Item1": 0.917,
                 "Item2": 27.0
               },
               {
-                "Item1": 1.074,
+                "Item1": 1.048,
                 "Item2": 35.0
               }
             ]
@@ -3727,13 +4092,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1750,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open",
-          "Value": 700,
+          "Value": 750,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -3749,13 +4114,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1770,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1205,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -3771,13 +4136,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1840,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open",
-          "Value": 700,
+          "Value": 765,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -3793,15 +4158,15 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1690,
           "Incremental": false,
-          "Configuration": "t0.8"
+          "Configuration": "t1.0"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 735,
           "Incremental": false,
-          "Configuration": "t0.8"
+          "Configuration": "t1.0"
         }
       ]
     },
@@ -3815,13 +4180,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1720,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1150,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -3837,7 +4202,7 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1730,
           "Incremental": false,
           "Configuration": "t0.8"
         },
@@ -3859,13 +4224,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1765,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1220,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -3881,13 +4246,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1770,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1250,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -3903,13 +4268,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1770,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1250,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -3925,7 +4290,7 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1780,
           "Incremental": false,
           "Configuration": "t0.8"
         },
@@ -3947,13 +4312,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1790,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1220,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -3969,13 +4334,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1720,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1150,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -3991,13 +4356,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1785,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1180,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4013,13 +4378,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1780,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1220,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4035,13 +4400,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1735,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1150,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4057,13 +4422,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1745,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1160,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4079,13 +4444,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1750,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1170,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4101,13 +4466,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1730,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1120,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4123,13 +4488,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1775,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1190,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4145,13 +4510,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1735,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1180,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4173,7 +4538,7 @@
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1125,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4189,13 +4554,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1765,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1180,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4211,13 +4576,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1695,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1100,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4233,13 +4598,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1735,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1160,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4255,13 +4620,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1745,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1160,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4277,13 +4642,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1705,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1135,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4299,13 +4664,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1745,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1145,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4321,13 +4686,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1760,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1150,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4349,7 +4714,7 @@
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1120,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4365,13 +4730,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1790,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1230,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4387,13 +4752,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1750,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1150,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4409,7 +4774,7 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1760,
           "Incremental": false,
           "Configuration": "t0.8"
         },
@@ -4431,13 +4796,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1730,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1160,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4453,13 +4818,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1785,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1230,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4475,13 +4840,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1750,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1170,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4497,13 +4862,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1705,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1160,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4519,13 +4884,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1725,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1150,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4541,7 +4906,7 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1775,
           "Incremental": false,
           "Configuration": "t0.8"
         },
@@ -4563,13 +4928,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1780,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1220,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4585,13 +4950,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1705,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1150,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4607,13 +4972,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1695,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1110,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4629,7 +4994,7 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1795,
           "Incremental": false,
           "Configuration": "t0.8"
         },
@@ -4651,13 +5016,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1795,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1240,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4673,13 +5038,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1785,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1190,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4695,13 +5060,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1740,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1135,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4717,13 +5082,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1700,
+          "Value": 1735,
           "Incremental": false,
           "Configuration": "t0.8"
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 1100,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -4745,13 +5110,13 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1100,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 1075,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -4773,7 +5138,7 @@
         },
         {
           "Name": "ColdTrickle",
-          "Value": 1375,
+          "Value": 1340,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -4785,13 +5150,13 @@
         },
         {
           "Name": "Open",
-          "Value": 1000,
+          "Value": 1235,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 950,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -4813,7 +5178,7 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1250,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -4841,13 +5206,13 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1400,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 1025,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -4869,7 +5234,7 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1200,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -4897,13 +5262,13 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1400,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 1100,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -4925,13 +5290,13 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1450,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 975,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -4953,7 +5318,7 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1350,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -4981,7 +5346,7 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1350,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -5003,13 +5368,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 2000,
+          "Value": 2050,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1250,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -5031,13 +5396,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 2000,
+          "Value": 2300,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1260,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -5093,7 +5458,7 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1260,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -5127,7 +5492,7 @@
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 1025,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -5143,13 +5508,13 @@
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 2000,
+          "Value": 2300,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 950,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -5177,7 +5542,7 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1400,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -5205,13 +5570,13 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1400,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 900,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -5233,13 +5598,13 @@
         },
         {
           "Name": "Open",
-          "Value": 1300,
+          "Value": 1400,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 1025,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -5251,9 +5616,9 @@
       "Description": "Coil trap flow valve",
       "Position": 0,
       "MinimumPosition": 0,
-      "MaximumPosition": 682,
+      "MaximumPosition": 675,
       "PositionsPerTurn": 96,
-      "ClosedOffset": 10,
+      "ClosedOffset": 3,
       "Calibrated": true,
       "ConsecutiveMatches": 9,
       "ValveState": "Opened",
@@ -5831,11 +6196,11 @@
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hIP1CCS",
       "Description": "Inlet port 1 sample furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 4,
       "PidSetup": "PID_IP1",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5854,17 +6219,17 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP2CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hIP2CCS",
       "Description": "Inlet port 2 sample furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 2,
       "PidSetup": "PID_IP2",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5883,7 +6248,7 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP3CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -5893,7 +6258,7 @@
       "PidSetup": "PID_IP3",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5912,17 +6277,17 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP4CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hIP4CCS",
       "Description": "Inlet port 4 sample furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 4,
       "PidSetup": "PID_IP4",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5941,17 +6306,17 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP5CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hIP5CCS",
       "Description": "Inlet port 5 sample furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 2,
       "PidSetup": "PID_IP5",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5970,7 +6335,7 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP6CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -5980,7 +6345,7 @@
       "PidSetup": "PID_IP6",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5999,17 +6364,17 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP7CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hIP7CCS",
       "Description": "Inlet port 7 sample furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 4,
       "PidSetup": "PID_IP7",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -6028,17 +6393,17 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP8CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hIP8CCS",
       "Description": "Inlet port 8 sample furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 2,
       "PidSetup": "PID_IP8",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -6057,7 +6422,7 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP9CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -6067,7 +6432,7 @@
       "PidSetup": "PID_IP9",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -6086,17 +6451,17 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP10CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hIP10CCS",
       "Description": "Inlet port 10 sample furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 4,
       "PidSetup": "PID_IP10",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -6115,17 +6480,17 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP11CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hIP11CCS",
       "Description": "Inlet port 11 sample furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 2,
       "PidSetup": "PID_IP11",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -6144,7 +6509,7 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP12CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -6154,7 +6519,7 @@
       "PidSetup": "PID_IP12",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 850.0,
+      "MaximumSetpoint": 1000.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -6173,7 +6538,7 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 15.0
+      "MaximumPowerLevel": 22.0
     },
     "hIP1CCQ": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -6201,7 +6566,7 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
+      "PowerLevel": 11.3,
       "MaximumPowerLevel": 12.0
     },
     "hIP2CCQ": {
@@ -6230,7 +6595,7 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
+      "PowerLevel": 11.5,
       "MaximumPowerLevel": 12.0
     },
     "hIP3CCQ": {
@@ -6259,7 +6624,7 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
+      "PowerLevel": 11.6,
       "MaximumPowerLevel": 12.0
     },
     "hIP4CCQ": {
@@ -6288,8 +6653,8 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
-      "MaximumPowerLevel": 12.0
+      "PowerLevel": 12.78,
+      "MaximumPowerLevel": 13.0
     },
     "hIP5CCQ": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -6317,7 +6682,7 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
+      "PowerLevel": 11.7,
       "MaximumPowerLevel": 12.0
     },
     "hIP6CCQ": {
@@ -6346,8 +6711,8 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
-      "MaximumPowerLevel": 12.0
+      "PowerLevel": 12.19,
+      "MaximumPowerLevel": 13.0
     },
     "hIP7CCQ": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -6375,7 +6740,7 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
+      "PowerLevel": 11.5,
       "MaximumPowerLevel": 12.0
     },
     "hIP8CCQ": {
@@ -6404,7 +6769,7 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
+      "PowerLevel": 11.8,
       "MaximumPowerLevel": 12.0
     },
     "hIP9CCQ": {
@@ -6433,7 +6798,7 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
+      "PowerLevel": 11.8,
       "MaximumPowerLevel": 12.0
     },
     "hIP10CCQ": {
@@ -6462,7 +6827,7 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
+      "PowerLevel": 11.7,
       "MaximumPowerLevel": 12.0
     },
     "hIP11CCQ": {
@@ -6491,7 +6856,7 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
+      "PowerLevel": 11.73,
       "MaximumPowerLevel": 12.0
     },
     "hIP12CCQ": {
@@ -6520,8 +6885,8 @@
       "Rising": 0.0,
       "ZerosToAverage": 30,
       "ManualMode": true,
-      "PowerLevel": 12.0,
-      "MaximumPowerLevel": 12.0
+      "PowerLevel": 12.94,
+      "MaximumPowerLevel": 13.0
     },
     "hGR1": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -6550,13 +6915,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 14.0
     },
     "hGR2": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR2",
       "Description": "Graphite reactor 2 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 1,
       "PidSetup": "PID_GR2",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6579,13 +6944,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 12.0
     },
     "hGR3": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR3",
       "Description": "Graphite reactor 3 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 2,
       "PidSetup": "PID_GR3",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6608,13 +6973,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 14.0
     },
     "hGR4": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR4",
       "Description": "Graphite reactor 4 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 3,
       "PidSetup": "PID_GR4",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6637,13 +7002,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 12.0
     },
     "hGR5": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR5",
       "Description": "Graphite reactor 5 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 4,
       "PidSetup": "PID_GR5",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6666,13 +7031,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 12.0
     },
     "hGR6": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR6",
       "Description": "Graphite reactor 6 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 5,
       "PidSetup": "PID_GR6",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6695,7 +7060,7 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 14.0
     },
     "hGR7": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -6724,13 +7089,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 14.0
     },
     "hGR8": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR8",
       "Description": "Graphite reactor 8 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 1,
       "PidSetup": "PID_GR8",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6753,13 +7118,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 16.0
     },
     "hGR9": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR9",
       "Description": "Graphite reactor 9 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 2,
       "PidSetup": "PID_GR9",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6782,13 +7147,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 16.0
     },
     "hGR10": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR10",
       "Description": "Graphite reactor 10 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 3,
       "PidSetup": "PID_GR10",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6811,13 +7176,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 12.0
     },
     "hGR11": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR11",
       "Description": "Graphite reactor 11 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 4,
       "PidSetup": "PID_GR11",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6840,13 +7205,13 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 12.0
     },
     "hGR12": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hGR12",
       "Description": "Graphite reactor 12 furnace",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 5,
       "PidSetup": "PID_GR12",
       "Setpoint": 400.0,
       "MinimumSetpoint": 0.0,
@@ -6869,18 +7234,18 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 8.0
+      "MaximumPowerLevel": 12.0
     },
     "hVTC": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
       "Name": "hVTC",
       "Description": "Variable-temperature coldfinger heater",
-      "ThermocoupleChannel": 0,
+      "ThermocoupleChannel": 4,
       "PidSetup": "VtcCold",
       "Setpoint": -140.0,
       "MinimumSetpoint": -196.0,
       "MaximumSetpoint": 55.0,
-      "StopAction": "TurnOff",
+      "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
       "Ratiometric": false,
@@ -6898,7 +7263,7 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 3.0
+      "MaximumPowerLevel": 4.0
     }
   },
   "PidSetups": {
@@ -6906,226 +7271,226 @@
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP1",
       "Description": "PID parameters for IP1 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 13.88,
+      "Integral": 0.00676,
+      "Derivative": 172.4,
+      "Preset": 0.985
     },
     "PID_IP2": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP2",
       "Description": "PID parameters for IP2 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 14.8,
+      "Integral": 0.00718,
+      "Derivative": 156.3,
+      "Preset": 0.924
     },
     "PID_IP3": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP3",
       "Description": "PID parameters for IP3 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 12.43,
+      "Integral": 0.00825,
+      "Derivative": 137.6,
+      "Preset": 0.795
     },
     "PID_IP4": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP4",
       "Description": "PID parameters for IP4 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 13.81,
+      "Integral": 0.00721,
+      "Derivative": 151.5,
+      "Preset": 1.017
     },
     "PID_IP5": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP5",
       "Description": "PID parameters for IP5 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 13.54,
+      "Integral": 0.00659,
+      "Derivative": 166.7,
+      "Preset": 1.06
     },
     "PID_IP6": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP6",
       "Description": "PID parameters for IP6 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 11.92,
+      "Integral": 0.00813,
+      "Derivative": 127.1,
+      "Preset": 0.836
     },
     "PID_IP7": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP7",
       "Description": "PID parameters for IP7 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 15.4,
+      "Integral": 0.00593,
+      "Derivative": 202.7,
+      "Preset": 1.052
     },
     "PID_IP8": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP8",
       "Description": "PID parameters for IP8 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 13.87,
+      "Integral": 0.00665,
+      "Derivative": 176.5,
+      "Preset": 0.983
     },
     "PID_IP9": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP9",
       "Description": "PID parameters for IP9 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+       "Gain": 20.37,
+      "Integral": 0.00988,
+      "Derivative": 85.2,
+      "Preset": 0.646
     },
     "PID_IP10": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP10",
       "Description": "PID parameters for IP10 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 13.04,
+      "Integral": 0.00732,
+      "Derivative": 157.9,
+      "Preset": 0.996
     },
     "PID_IP11": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP11",
       "Description": "PID parameters for IP11 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 13.93,
+      "Integral": 0.00732,
+      "Derivative": 154.6,
+      "Preset": 0.984
     },
     "PID_IP12": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP12",
       "Description": "PID parameters for IP12 sample furnace",
-      "Gain": 14.0,
-      "Integral": 0.007,
-      "Derivative": 170.0,
-      "Preset": 0.75
+      "Gain": 16.41,
+      "Integral": 0.00631,
+      "Derivative": 185.2,
+      "Preset": 1.031
     },
     "PID_GR1": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR1",
       "Description": "PID parameters for GR1 furnace",
-      "Gain": 59.47,
-      "Integral": 0.01024,
-      "Derivative": 87.7,
-      "Preset": 0.612
+      "Gain": 11.9,
+      "Integral": 0.00772,
+      "Derivative": 125.0,
+      "Preset": 0.72
     },
     "PID_GR2": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR2",
       "Description": "PID parameters for GR2 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 26.86,
+      "Integral": 0.00805,
+      "Derivative": 104.2,
+      "Preset": 0.72
     },
     "PID_GR3": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR3",
       "Description": "PID parameters for GR3 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 10.24,
+      "Integral": 0.00763,
+      "Derivative": 137.6,
+      "Preset": 0.687
     },
     "PID_GR4": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR4",
       "Description": "PID parameters for GR4 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 13.95,
+      "Integral": 0.00818,
+      "Derivative": 102.0,
+      "Preset": 0.693
     },
     "PID_GR5": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR5",
       "Description": "PID parameters for GR5 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 14.08,
+      "Integral": 0.0091,
+      "Derivative": 108.7,
+      "Preset": 0.695
     },
     "PID_GR6": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR6",
       "Description": "PID parameters for GR6 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 10.21,
+      "Integral": 0.00841,
+      "Derivative": 109.5,
+      "Preset": 0.675
     },
     "PID_GR7": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR7",
       "Description": "PID parameters for GR7 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 14.49,
+      "Integral": 0.00886,
+      "Derivative": 102.0,
+      "Preset": 0.684
     },
     "PID_GR8": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR8",
       "Description": "PID parameters for GR8 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
+      "Gain": 10.0,
+      "Integral": 0.00729,
       "Derivative": 100.0,
-      "Preset": 0.8
+      "Preset": 0.796
     },
     "PID_GR9": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR9",
       "Description": "PID parameters for GR9 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 16.91,
+      "Integral": 0.00835,
+      "Derivative": 103.4,
+      "Preset": 0.613
     },
     "PID_GR10": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR10",
       "Description": "PID parameters for GR10 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 9.54,
+      "Integral": 0.00849,
+      "Derivative": 110.3,
+      "Preset": 0.687
     },
     "PID_GR11": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR11",
       "Description": "PID parameters for GR11 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 20.18,
+      "Integral": 0.0079,
+      "Derivative": 117.2,
+      "Preset": 0.749
     },
     "PID_GR12": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_GR12",
       "Description": "PID parameters for GR12 furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 11.4,
+      "Integral": 0.00762,
+      "Derivative": 122.0,
+      "Preset": 0.712
     },
     "CFF60V88W": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "CFF60V88W",
       "Description": "Generic PID parameters for a 60V 88W CF furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
+      "Gain": 7.53,
+      "Integral": 0.00891,
+      "Derivative": 100.7,
+      "Preset": 0.687
     },
     "GROven200W": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
@@ -7140,19 +7505,20 @@
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "VtcCold",
       "Description": "PID parameters for VTC with LN flowing",
-      "Gain": 60.0,
-      "Integral": 0.04,
-      "Derivative": 225.0,
-      "Preset": 6.0
+      "Gain": 87.91,
+      "Integral": 0.041,
+      "Derivative": 353.1,
+      "Preset": 8.61
+
     },
     "VtcWarm": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "VtcWarm",
       "Description": "PID parameters for VTC with no LN",
-      "Gain": 60.0,
-      "Integral": 0.002,
-      "Derivative": 370.0,
-      "Preset": 0.7
+      "Gain": 10.0,
+      "Integral": 0.00293,
+      "Derivative": 341.1,
+      "Preset": 1.26
     },
     "HeatTape120V470W": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
@@ -7258,7 +7624,7 @@
       "WireTemperatureLimit": 65,
       "MaximumHeaterPower": 8.0,
       "HeaterPid": "VtcCold",
-      "MaximumWarmHeaterPower": 3.0,
+      "MaximumWarmHeaterPower": 4.0,
       "WarmHeaterPid": "VtcWarm",
       "ColdTemperature": -170,
       "MaximumMinutesToFreeze": 8,
@@ -7625,7 +7991,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "VM",
       "Description": "Vacuum manifold chamber",
-      "MilliLiters": 141.5843129690239,
+      "MilliLiters": 140.6270969987477,
       "Manometer": "pVM",
       "Thermometer": null,
       "Heater": null,
@@ -7645,7 +8011,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "IMC",
       "Description": "Inlet manifold center chamber",
-      "MilliLiters": 4.8496248621383735,
+      "MilliLiters": 4.7018347562250415,
       "Manometer": "pIM",
       "Thermometer": null,
       "Heater": null,
@@ -7655,7 +8021,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "IML",
       "Description": "Inlet manifold left chamber",
-      "MilliLiters": 9.800685212240877,
+      "MilliLiters": 9.754372537264258,
       "Manometer": null,
       "Thermometer": null,
       "Heater": null,
@@ -7665,7 +8031,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "IMR",
       "Description": "Inlet manifold right chamber",
-      "MilliLiters": 9.778996636151913,
+      "MilliLiters": 9.39312177372107,
       "Manometer": null,
       "Thermometer": null,
       "Heater": null,
@@ -7675,7 +8041,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "CT",
       "Description": "Coil trap chamber",
-      "MilliLiters": 16.525577419654695,
+      "MilliLiters": 22.972959722142853,
       "Manometer": "pCT",
       "Thermometer": "tLN_CT",
       "Heater": null,
@@ -7685,7 +8051,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "VTT",
       "Description": "Variable-temperature trap chamber",
-      "MilliLiters": 9.58754616497479,
+      "MilliLiters":  9.533251444913702,
       "Manometer": null,
       "Thermometer": "tVTC",
       "Heater": "hVTC",
@@ -7695,7 +8061,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "MC",
       "Description": "Measurement chamber",
-      "MilliLiters": 14.699439287561598,
+      "MilliLiters": 14.425377562380696,
       "Manometer": "pMC",
       "Thermometer": "tMC",
       "Heater": null,
@@ -7705,7 +8071,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "Split",
       "Description": "Split chamber",
-      "MilliLiters": 2.0813527304603823,
+      "MilliLiters": 2.1980080340917763,
       "Manometer": null,
       "Thermometer": null,
       "Heater": null,
@@ -7715,7 +8081,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "GMC",
       "Description": "Graphite manifold center chamber",
-      "MilliLiters": 4.815024628420251,
+      "MilliLiters": 4.678410253361925,
       "Manometer": "pGM",
       "Thermometer": null,
       "Heater": null,
@@ -7725,7 +8091,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "GML",
       "Description": "Graphite manifold left chamber",
-      "MilliLiters": 11.276081192878976,
+      "MilliLiters": 11.242756278464393,
       "Manometer": null,
       "Thermometer": "tGML",
       "Heater": null,
@@ -7735,7 +8101,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "GMR",
       "Description": "Graphite manifold right chamber",
-      "MilliLiters": 11.178894904288196,
+      "MilliLiters": 11.648799293708526,
       "Manometer": null,
       "Thermometer": "tGMR",
       "Heater": null,
@@ -7746,7 +8112,7 @@
       "Name": "MCP1",
       "Description": "Aliquot 2 chamber (MCP1)",
       "Valve": "vMC_MCP1",
-      "MilliLiters": 15.259684549262541,
+      "MilliLiters": 14.794044460174886,
       "Manometer": null,
       "Thermometer": null,
       "Heater": null,
@@ -7757,7 +8123,7 @@
       "Name": "MCP2",
       "Description": "Aliquot 3 chamber (MCP2)",
       "Valve": "vMC_MCP2",
-      "MilliLiters": 14.853782106956135,
+      "MilliLiters": 14.860349462135744,
       "Manometer": null,
       "Thermometer": null,
       "Heater": null,
@@ -8098,7 +8464,7 @@
       },
       "PriorPressure": 71.2,
       "PressurePeak": 556,
-      "MilliLiters": 2.7728189422697764,
+      "MilliLiters": 2.995760981666084,
       "Valve": "vGR1_GML",
       "Manometer": "pGR1",
       "Thermometer": "tGR1",
@@ -8130,7 +8496,7 @@
       },
       "PriorPressure": 48.300000000000004,
       "PressurePeak": 500,
-      "MilliLiters": 2.619673747931876,
+      "MilliLiters": 2.9786625950941996,
       "Valve": "vGR2_GML",
       "Manometer": "pGR2",
       "Thermometer": "tGR2",
@@ -8162,7 +8528,7 @@
       },
       "PriorPressure": 286.5,
       "PressurePeak": 1662,
-      "MilliLiters": 2.6249849672434467,
+      "MilliLiters": 3.0139611665643518,
       "Valve": "vGR3_GML",
       "Manometer": "pGR3",
       "Thermometer": "tGR3",
@@ -8194,7 +8560,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "MilliLiters": 3.051988976978128,
       "Valve": "vGR4_GML",
       "Manometer": "pGR4",
       "Thermometer": "tGR4",
@@ -8226,7 +8592,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "MilliLiters": 3.271863511263308,
       "Valve": "vGR5_GML",
       "Manometer": "pGR5",
       "Thermometer": "tGR5",
@@ -8258,7 +8624,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "MilliLiters": 2.990279056263684,
       "Valve": "vGR6_GML",
       "Manometer": "pGR6",
       "Thermometer": "tGR6",
@@ -8290,7 +8656,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "MilliLiters": 2.9661523591499157,
       "Valve": "vGR7_GMR",
       "Manometer": "pGR7",
       "Thermometer": "tGR7",
@@ -8322,7 +8688,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "MilliLiters": 2.9762277068495573,
       "Valve": "vGR8_GMR",
       "Manometer": "pGR8",
       "Thermometer": "tGR8",
@@ -8386,7 +8752,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "MilliLiters": 2.948494223787596,
       "Valve": "vGR10_GMR",
       "Manometer": "pGR10",
       "Thermometer": "tGR10",
@@ -8418,7 +8784,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "MilliLiters": 3.0019989025286637,
       "Valve": "vGR11_GMR",
       "Manometer": "pGR11",
       "Thermometer": "tGR11",
@@ -8450,7 +8816,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "MilliLiters": 2.9454627746398887,
       "Valve": "vGR12_GMR",
       "Manometer": "pGR12",
       "Thermometer": "tGR12",
@@ -9650,7 +10016,7 @@
       "FlowManager": "H2.GMFlowManager",
       "Destination": "GM",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "H2.GML": {
@@ -9663,9 +10029,9 @@
       "Meter": "pGM",
       "SecondsSettlingTime": 3.0,
       "FlowManager": "H2.GMFlowManager",
-      "Destination": "GMC_GML",
+      "Destination": "GML_GMC",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "H2.GMR": {
@@ -9678,9 +10044,9 @@
       "Meter": "pGM",
       "SecondsSettlingTime": 3.0,
       "FlowManager": "H2.GMFlowManager",
-      "Destination": "GMC_GMR",
+      "Destination": "GMR_GMC",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.GM": {
@@ -9695,7 +10061,7 @@
       "FlowManager": "He.GMFlowManager",
       "Destination": "GM",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.GML": {
@@ -9708,9 +10074,9 @@
       "Meter": "pGM",
       "SecondsSettlingTime": 3.0,
       "FlowManager": "He.GMFlowManager",
-      "Destination": "GMC_GML",
+      "Destination": "GML_GMC",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.GMR": {
@@ -9723,9 +10089,9 @@
       "Meter": "pGM",
       "SecondsSettlingTime": 3.0,
       "FlowManager": "He.GMFlowManager",
-      "Destination": "GMC_GMR",
+      "Destination": "GMR_GMC",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.IM": {
@@ -9740,7 +10106,7 @@
       "FlowManager": "He.IMFlowManager",
       "Destination": "IM",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.IML": {
@@ -9755,7 +10121,7 @@
       "FlowManager": "He.IMFlowManager",
       "Destination": "IML_IMC",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.IMR": {
@@ -9770,7 +10136,7 @@
       "FlowManager": "He.IMFlowManager",
       "Destination": "IMR_IMC",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.MC": {
@@ -9785,7 +10151,7 @@
       "FlowManager": "He.MCFlowManager",
       "Destination": "MC",
       "Path": "VM_Split",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.MCA": {
@@ -9800,7 +10166,7 @@
       "FlowManager": "He.MCFlowManager",
       "Destination": "MCA",
       "Path": "VM_Split",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.MCA_GMC": {
@@ -9815,7 +10181,7 @@
       "FlowManager": "He.MCFlowManager",
       "Destination": "MCA_GMC",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.MC_GM": {
@@ -9830,7 +10196,7 @@
       "FlowManager": "He.MCFlowManager",
       "Destination": "MC_GM",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "He.MCA_GM": {
@@ -9845,7 +10211,7 @@
       "FlowManager": "He.MCFlowManager",
       "Destination": "MCA_GM",
       "Path": "VM",
-      "PurgePressure": 5.0,
+      "PurgePressure": 10.0,
       "SecondsToPurge": 20
     },
     "CO2.MC": {
@@ -11066,11 +11432,11 @@
     "Description": "System settings, constants and default parameters",
     "EnableWatchdogs": true,
     "EnableAutozero": true,
-    "PriorGR": "GR12",
+    "PriorGR": "GR1",
     "NextGraphiteNumber": 1,
     "DefaultMassUnits": "mg",
     "Take13CDefault": false,
-    "SampleCounter": 1,
+    "SampleCounter": 750,
     "MaximumAliquotsPerSample": 3,
     "EnableSmallReactors": false,
     "UpdateIntervalMilliseconds": 50,
@@ -11138,7 +11504,7 @@
       },
       {
         "ParameterName": "LeakTightTorrLitersPerSecond",
-        "Value": 3E-05,
+        "Value": 6E-05,
         "Description": "The effective gas load below which a volume is considered leak free."
       },
       {
@@ -11248,7 +11614,7 @@
       },
       {
         "ParameterName": "GRFirstEvacuationMinutes",
-        "Value": 0.0,
+        "Value": 1.0,
         "Description": "How long to evacuate freshly serviced graphite reactors."
       },
       {
@@ -11303,7 +11669,7 @@
       },
       {
         "ParameterName": "MaximumSampleMicrogramsCarbon",
-        "Value": 1000.0,
+        "Value": 1100.0,
         "Description": "Discard CO2 splits as long as the sample contains more than this much carbon."
       },
       {
