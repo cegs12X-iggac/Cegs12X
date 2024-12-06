@@ -89,6 +89,7 @@
     },
     "Graphite Precondition": {
       "Name": "Graphite Precondition",
+      "Description": "",
       "PortType": "Combustion",
       "Steps": [
         {
@@ -104,7 +105,6 @@
           "Temperature": 500,
           "Minutes": 90,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": false,
           "Name": "Pre-Burn",
           "Description": ""
@@ -462,6 +462,7 @@
     },
     "IAEA C3-1": {
       "Name": "IAEA C3-1",
+      "Description": "",
       "PortType": "Combustion",
       "Steps": [
         {
@@ -485,7 +486,6 @@
           "Temperature": 150,
           "Minutes": 15,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": false,
           "Name": "Pre-Burn",
           "Description": ""
@@ -499,7 +499,6 @@
           "Temperature": 850,
           "Minutes": 45,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -526,6 +525,7 @@
     },
     "Background": {
       "Name": "Background",
+      "Description": "",
       "PortType": "Combustion",
       "Steps": [
         {
@@ -545,7 +545,6 @@
           "Temperature": 450,
           "Minutes": 15,
           "AdmitO2": false,
-          "OpenLine": false,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -571,6 +570,7 @@
     },
     "Wood1": {
       "Name": "Wood1",
+      "Description": "",
       "PortType": "Combustion",
       "Steps": [
         {
@@ -594,7 +594,6 @@
           "Temperature": 150,
           "Minutes": 15,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": false,
           "Name": "Pre-Burn",
           "Description": ""
@@ -608,7 +607,6 @@
           "Temperature": 850,
           "Minutes": 300,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -634,6 +632,7 @@
     },
     "Coal": {
       "Name": "Coal",
+      "Description": "",
       "PortType": "Combustion",
       "Steps": [
         {
@@ -653,7 +652,6 @@
           "Temperature": 850,
           "Minutes": 50,
           "AdmitO2": false,
-          "OpenLine": false,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -679,6 +677,7 @@
     },
     "Wood4": {
       "Name": "Wood4",
+      "Description": "",
       "PortType": "Combustion",
       "Steps": [
         {
@@ -698,7 +697,6 @@
           "Temperature": 850,
           "Minutes": 120,
           "AdmitO2": false,
-          "OpenLine": false,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -724,6 +722,7 @@
     },
     "Collagen": {
       "Name": "Collagen",
+      "Description": "",
       "PortType": "Combustion",
       "Steps": [
         {
@@ -747,7 +746,6 @@
           "Temperature": 150,
           "Minutes": 15,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": false,
           "Name": "Pre-Burn",
           "Description": ""
@@ -761,7 +759,6 @@
           "Temperature": 700,
           "Minutes": 45,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -831,7 +828,6 @@
         "do3": "fan2",
         "do4": "fan1",
         "ai0": "pMC",
-        "ai1": "DC15VPower",
         "ai2": "pCT",
         "ai97": "pVM_LP",
         "ai3": "pVM_IG",
@@ -1265,7 +1261,6 @@
       "LogEverything": false,
       "Devices": {
         "h4": "hVTC",
-        "t0": "tLnOverflow",
         "t1": "tLN_GR10",
         "t2": "tLN_GR11",
         "t3": "tLN_GR12",
@@ -1698,7 +1693,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.006916574364743301"
+            "Argument": "x-0.03522763158307505"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -1746,7 +1741,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x+0.039455304723228696"
+            "Argument": "x-0.3258190094789673"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -1890,7 +1885,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.48236139105357906"
+            "Argument": "x-0.4836354384387029"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -4087,6 +4082,7 @@
       "Name": "vHV",
       "Description": "Vacuum system high vacuum valve",
       "ValveState": "Opened",
+      "Position": 750,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4109,6 +4105,7 @@
       "Name": "vLV",
       "Description": "Vacuum system low vacuum valve",
       "ValveState": "Closed",
+      "Position": 1770,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4131,6 +4128,7 @@
       "Name": "vB",
       "Description": "Vacuum system turbo pump backing valve",
       "ValveState": "Opened",
+      "Position": 765,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4153,6 +4151,7 @@
       "Name": "vR",
       "Description": "Vacuum system roughing pump valve",
       "ValveState": "Opened",
+      "Position": 735,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4175,6 +4174,7 @@
       "Name": "vIMC_VM",
       "Description": "IMC-VM valve",
       "ValveState": "Opened",
+      "Position": 1150,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4197,6 +4197,7 @@
       "Name": "vCT_VM",
       "Description": "CT-VM valve",
       "ValveState": "Opened",
+      "Position": 1200,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4219,6 +4220,7 @@
       "Name": "vGMC_VM",
       "Description": "GMC-VM valve",
       "ValveState": "Opened",
+      "Position": 1220,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4241,6 +4243,7 @@
       "Name": "vHe_VM",
       "Description": "He-VM gas shutoff valve",
       "ValveState": "Closed",
+      "Position": 1770,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4263,6 +4266,7 @@
       "Name": "vH2_VM",
       "Description": "H2-VM gas shutoff valve",
       "ValveState": "Closed",
+      "Position": 1770,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4285,6 +4289,7 @@
       "Name": "vCO2_VM",
       "Description": "CO2-VM gas shutoff valve",
       "ValveState": "Closed",
+      "Position": 1780,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4307,6 +4312,7 @@
       "Name": "vO2_VM",
       "Description": "O2-VM gas shutoff valve",
       "ValveState": "Closed",
+      "Position": 1790,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4329,6 +4335,7 @@
       "Name": "vIP1_IML",
       "Description": "IP1-IML valve",
       "ValveState": "Closed",
+      "Position": 1720,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4351,6 +4358,7 @@
       "Name": "vIP2_IML",
       "Description": "IP2-IML valve",
       "ValveState": "Closed",
+      "Position": 1785,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4373,6 +4381,7 @@
       "Name": "vIP3_IML",
       "Description": "IP3-IML valve",
       "ValveState": "Closed",
+      "Position": 1780,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4395,6 +4404,7 @@
       "Name": "vIP4_IML",
       "Description": "IP4-IML valve",
       "ValveState": "Closed",
+      "Position": 1735,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4417,6 +4427,7 @@
       "Name": "vIP5_IML",
       "Description": "IP5-IML valve",
       "ValveState": "Closed",
+      "Position": 1745,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4439,6 +4450,7 @@
       "Name": "vIP6_IML",
       "Description": "IP6-IML valve",
       "ValveState": "Closed",
+      "Position": 1750,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4461,6 +4473,7 @@
       "Name": "vIML_IMC",
       "Description": "IML-IMC valve",
       "ValveState": "Opened",
+      "Position": 1120,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4483,6 +4496,7 @@
       "Name": "vIP7_IMR",
       "Description": "IP7-IMR valve",
       "ValveState": "Closed",
+      "Position": 1775,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4505,6 +4519,7 @@
       "Name": "vIP8_IMR",
       "Description": "IP8-IMR valve",
       "ValveState": "Closed",
+      "Position": 1735,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4527,6 +4542,7 @@
       "Name": "vIP9_IMR",
       "Description": "IP9-IMR valve",
       "ValveState": "Closed",
+      "Position": 1700,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4549,6 +4565,7 @@
       "Name": "vIP10_IMR",
       "Description": "IP10-IMR valve",
       "ValveState": "Closed",
+      "Position": 1765,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4571,6 +4588,7 @@
       "Name": "vIP11_IMR",
       "Description": "IP11-IMR valve",
       "ValveState": "Closed",
+      "Position": 1695,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4593,6 +4611,7 @@
       "Name": "vIP12_IMR",
       "Description": "IP12-IMR valve",
       "ValveState": "Closed",
+      "Position": 1735,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4615,6 +4634,7 @@
       "Name": "vIMR_IMC",
       "Description": "IMT-IMC valve",
       "ValveState": "Opened",
+      "Position": 1160,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4637,6 +4657,7 @@
       "Name": "vIMC_CT",
       "Description": "IMC-CT valve",
       "ValveState": "Opened",
+      "Position": 1135,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4659,6 +4680,7 @@
       "Name": "vCT_VTT",
       "Description": "CT-VTT valve",
       "ValveState": "Opened",
+      "Position": 1145,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4681,6 +4703,7 @@
       "Name": "vVTT_MC",
       "Description": "VTT-MC valve",
       "ValveState": "Opened",
+      "Position": 1150,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4703,6 +4726,7 @@
       "Name": "vMC_MCP1",
       "Description": "MC-MCP1 valve",
       "ValveState": "Opened",
+      "Position": 1120,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4725,6 +4749,7 @@
       "Name": "vMC_MCP2",
       "Description": "MC-MCP2 valve",
       "ValveState": "Opened",
+      "Position": 1230,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4747,6 +4772,7 @@
       "Name": "vMC_Split",
       "Description": "MC-Split valve",
       "ValveState": "Opened",
+      "Position": 1150,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4769,6 +4795,7 @@
       "Name": "vSplit_GMC",
       "Description": "Split-GM valve",
       "ValveState": "Opened",
+      "Position": 1200,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4791,6 +4818,7 @@
       "Name": "vGR1_GML",
       "Description": "GR1-GML valve",
       "ValveState": "Closed",
+      "Position": 1730,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4813,6 +4841,7 @@
       "Name": "vGR2_GML",
       "Description": "GR2-GML valve",
       "ValveState": "Closed",
+      "Position": 1785,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4835,6 +4864,7 @@
       "Name": "vGR3_GML",
       "Description": "GR3-GML valve",
       "ValveState": "Closed",
+      "Position": 1750,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4857,6 +4887,7 @@
       "Name": "vGR4_GML",
       "Description": "GR4-GML valve",
       "ValveState": "Closed",
+      "Position": 1705,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4879,6 +4910,7 @@
       "Name": "vGR5_GML",
       "Description": "GR5-GML valve",
       "ValveState": "Closed",
+      "Position": 1725,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4901,6 +4933,7 @@
       "Name": "vGR6_GML",
       "Description": "GR6-GML valve",
       "ValveState": "Closed",
+      "Position": 1775,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4923,6 +4956,7 @@
       "Name": "vGML_GMC",
       "Description": "GML-GMC valve",
       "ValveState": "Opened",
+      "Position": 1220,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4945,6 +4979,7 @@
       "Name": "vGR7_GMR",
       "Description": "GR7-GMR valve",
       "ValveState": "Closed",
+      "Position": 1705,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4967,6 +5002,7 @@
       "Name": "vGR8_GMR",
       "Description": "GR8-GMR valve",
       "ValveState": "Closed",
+      "Position": 1695,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4989,6 +5025,7 @@
       "Name": "vGR9_GMR",
       "Description": "GR9-GMR valve",
       "ValveState": "Closed",
+      "Position": 1795,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5011,6 +5048,7 @@
       "Name": "vGR10_GMR",
       "Description": "GR10-GMR valve",
       "ValveState": "Closed",
+      "Position": 1795,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5033,6 +5071,7 @@
       "Name": "vGR11_GMR",
       "Description": "GR11-GMR valve",
       "ValveState": "Closed",
+      "Position": 1785,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5055,6 +5094,7 @@
       "Name": "vGR12_GMR",
       "Description": "GR12-GMR valve",
       "ValveState": "Closed",
+      "Position": 1740,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5077,6 +5117,7 @@
       "Name": "vGMR_GMC",
       "Description": "GMR-GMC valve",
       "ValveState": "Opened",
+      "Position": 1100,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5099,6 +5140,7 @@
       "Name": "vLN_CT",
       "Description": "Coil trap LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5127,6 +5169,7 @@
       "Name": "vLN_VTT",
       "Description": "Variable-temperature trap LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5167,6 +5210,7 @@
       "Name": "vLN_MC",
       "Description": "Measurement chamber LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5195,6 +5239,7 @@
       "Name": "vLN_GR1",
       "Description": "Graphite reactor 1 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5223,6 +5268,7 @@
       "Name": "vLN_GR2",
       "Description": "Graphite reactor 2 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5251,6 +5297,7 @@
       "Name": "vLN_GR3",
       "Description": "Graphite reactor 3 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5279,6 +5326,7 @@
       "Name": "vLN_GR4",
       "Description": "Graphite reactor 4 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5307,6 +5355,7 @@
       "Name": "vLN_GR5",
       "Description": "Graphite reactor 5 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5335,6 +5384,7 @@
       "Name": "vLN_GR6",
       "Description": "Graphite reactor 6 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5363,6 +5413,7 @@
       "Name": "vLN_GR7",
       "Description": "Graphite reactor 7 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5391,6 +5442,7 @@
       "Name": "vLN_GR8",
       "Description": "Graphite reactor 8 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5419,6 +5471,7 @@
       "Name": "vLN_GR9",
       "Description": "Graphite reactor 9 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5447,6 +5500,7 @@
       "Name": "vLN_GR10",
       "Description": "Graphite reactor 10 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5475,6 +5529,7 @@
       "Name": "vLN_GR11",
       "Description": "Graphite reactor 11 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5503,6 +5558,7 @@
       "Name": "vLN_GR12",
       "Description": "Graphite reactor 12 LN valve",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5531,6 +5587,7 @@
       "Name": "vLN_Spare1",
       "Description": "Spare LN valve 1",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5559,6 +5616,7 @@
       "Name": "vLN_Spare2",
       "Description": "Spare LN valve 2",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5587,6 +5645,7 @@
       "Name": "vLN_Spare3",
       "Description": "Spare LN valve 3",
       "ValveState": "Closed",
+      "Position": 0,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -7343,7 +7402,7 @@
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "PID_IP9",
       "Description": "PID parameters for IP9 sample furnace",
-       "Gain": 20.37,
+      "Gain": 20.37,
       "Integral": 0.00988,
       "Derivative": 85.2,
       "Preset": 0.646
@@ -7509,7 +7568,6 @@
       "Integral": 0.041,
       "Derivative": 353.1,
       "Preset": 8.61
-
     },
     "VtcWarm": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
@@ -7961,7 +8019,7 @@
       "LowVacuumRequiredPressure": 8.0,
       "StateStopwatch": {
         "IsRunning": true,
-        "Accumulated": 0
+        "Accumulated": 19355
       },
       "IdleTimeout": 50
     }
@@ -8051,7 +8109,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "VTT",
       "Description": "Variable-temperature trap chamber",
-      "MilliLiters":  9.533251444913702,
+      "MilliLiters": 9.533251444913702,
       "Manometer": null,
       "Thermometer": "tVTC",
       "Heater": "hVTC",
@@ -10029,7 +10087,7 @@
       "Meter": "pGM",
       "SecondsSettlingTime": 3.0,
       "FlowManager": "H2.GMFlowManager",
-      "Destination": "GML_GMC",
+      "Destination": "GMC_GML",
       "Path": "VM",
       "PurgePressure": 10.0,
       "SecondsToPurge": 20
@@ -10044,7 +10102,7 @@
       "Meter": "pGM",
       "SecondsSettlingTime": 3.0,
       "FlowManager": "H2.GMFlowManager",
-      "Destination": "GMR_GMC",
+      "Destination": "GMC_GMR",
       "Path": "VM",
       "PurgePressure": 10.0,
       "SecondsToPurge": 20
@@ -10074,7 +10132,7 @@
       "Meter": "pGM",
       "SecondsSettlingTime": 3.0,
       "FlowManager": "He.GMFlowManager",
-      "Destination": "GML_GMC",
+      "Destination": "GMC_GML",
       "Path": "VM",
       "PurgePressure": 10.0,
       "SecondsToPurge": 20
@@ -10089,7 +10147,7 @@
       "Meter": "pGM",
       "SecondsSettlingTime": 3.0,
       "FlowManager": "He.GMFlowManager",
-      "Destination": "GMR_GMC",
+      "Destination": "GMC_GMR",
       "Path": "VM",
       "PurgePressure": 10.0,
       "SecondsToPurge": 20
@@ -11432,11 +11490,11 @@
     "Description": "System settings, constants and default parameters",
     "EnableWatchdogs": true,
     "EnableAutozero": true,
-    "PriorGR": "GR1",
+    "PriorGR": "GR12",
     "NextGraphiteNumber": 1,
     "DefaultMassUnits": "mg",
     "Take13CDefault": false,
-    "SampleCounter": 750,
+    "SampleCounter": 0,
     "MaximumAliquotsPerSample": 3,
     "EnableSmallReactors": false,
     "UpdateIntervalMilliseconds": 50,
@@ -11456,36 +11514,6 @@
         "ParameterName": "HoldSampleAtPorts",
         "Value": "NaN",
         "Description": "Set GR and d13C FTCs to Standby and hold to start reactions later."
-      },
-      {
-        "ParameterName": "NumberOfSplits",
-        "Value": 5.0,
-        "Description": "Number of splits to take for an RPO sample"
-      },
-      {
-        "ParameterName": "Split1TargetUgc",
-        "Value": 120.0,
-        "Description": "Target sample size (UgC) for the first split (lowest T)"
-      },
-      {
-        "ParameterName": "Split2TargetUgc",
-        "Value": 240.0,
-        "Description": "Target sample size (UgC) for the second split (second T range)"
-      },
-      {
-        "ParameterName": "Split3TargetUgc",
-        "Value": 240.0,
-        "Description": "Target sample size (UgC) for the third split (third T range)"
-      },
-      {
-        "ParameterName": "Split4TargetUgc",
-        "Value": 240.0,
-        "Description": "Target sample size (UgC) for the fourth split (fourth T range)"
-      },
-      {
-        "ParameterName": "Split5TargetUgc",
-        "Value": 240.0,
-        "Description": "Target sample size (UgC) for the fifth split (highest T range)"
       },
       {
         "ParameterName": "MaximumSampleTemperature",
