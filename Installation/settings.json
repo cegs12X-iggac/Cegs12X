@@ -650,7 +650,7 @@
         {
           "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
           "Temperature": 850,
-          "Minutes": 50,
+          "Minutes": 45,
           "AdmitO2": false,
           "WaitForSetpoint": true,
           "Name": "Combust",
@@ -1261,6 +1261,7 @@
       "LogEverything": false,
       "Devices": {
         "h4": "hVTC",
+        "t0": "tLNOverflow",
         "t1": "tLN_GR10",
         "t2": "tLN_GR11",
         "t3": "tLN_GR12",
@@ -1693,7 +1694,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.03522763158307505"
+            "Argument": "x-0.02130273645486772"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -1741,7 +1742,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.3258190094789673"
+            "Argument": "x+0.0416295825341694"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -1837,7 +1838,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.48916699789420215"
+            "Argument": "x-0.48691572371277037"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -1885,7 +1886,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.4836354384387029"
+            "Argument": "x-0.48243844047691303"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -1933,7 +1934,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5050696754847244"
+            "Argument": "x-0.5029265432243858"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2120,7 +2121,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5194087141755191"
+            "Argument": "x-0.5194542519668294"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2162,7 +2163,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5401072822314525"
+            "Argument": "x-0.5418222917792116"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2204,7 +2205,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.48560112213388246"
+            "Argument": "x-0.4876496985341103"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2246,7 +2247,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.44111598514221484"
+            "Argument": "x-0.4394291746150898"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2288,7 +2289,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.5056931007954475"
+            "Argument": "x-0.5225363197377769"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2330,7 +2331,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.4731044291256397"
+            "Argument": "x-0.4744927613549386"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2372,7 +2373,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.4972892225468847"
+            "Argument": "x-0.4966731233516789"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2414,7 +2415,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.4818032221635957"
+            "Argument": "x-0.482136666526863"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2455,8 +2456,8 @@
         "Operations": [
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
-            "Name": "ZeroOffset",
-            "Argument": "x-0.5"
+            "Name": null,
+            "Argument": "x-0.48264751741690287"
           },
           {
             "$type": "AeonHacs.PchipInterpolator, AeonHacs.Core",
@@ -2507,7 +2508,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.4824021071671881"
+            "Argument": "x-0.4835019813016072"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2549,7 +2550,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.4229775159349601"
+            "Argument": "x-0.4193094714828451"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -2591,7 +2592,7 @@
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
             "Name": "ZeroOffset",
-            "Argument": "x-0.4706227341390712"
+            "Argument": "x-0.47091398563077225"
           },
           {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -4065,7 +4066,7 @@
       "Description": "Micrograms of carbon in the measurement chamber",
       "UnitSymbol": "ugC",
       "Ratiometric": false,
-      "MaxValue": 0.0,
+      "MaxValue": 4000.0,
       "MinValue": 0.0,
       "Sensitivity": 0.01,
       "Resolution": 0.01,
@@ -4182,8 +4183,8 @@
       "$type": "AeonHacs.Components.CpwValve, AeonHacs.Core",
       "Name": "vIMC_VM",
       "Description": "IMC-VM valve",
-      "ValveState": "Opened",
-      "Position": 1150,
+      "ValveState": "Closed",
+      "Position": 1720,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4205,8 +4206,8 @@
       "$type": "AeonHacs.Components.CpwValve, AeonHacs.Core",
       "Name": "vCT_VM",
       "Description": "CT-VM valve",
-      "ValveState": "Opened",
-      "Position": 1200,
+      "ValveState": "Closed",
+      "Position": 1730,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4481,8 +4482,8 @@
       "$type": "AeonHacs.Components.CpwValve, AeonHacs.Core",
       "Name": "vIML_IMC",
       "Description": "IML-IMC valve",
-      "ValveState": "Opened",
-      "Position": 1120,
+      "ValveState": "Closed",
+      "Position": 1730,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4642,8 +4643,8 @@
       "$type": "AeonHacs.Components.CpwValve, AeonHacs.Core",
       "Name": "vIMR_IMC",
       "Description": "IMT-IMC valve",
-      "ValveState": "Opened",
-      "Position": 1160,
+      "ValveState": "Closed",
+      "Position": 1745,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4665,8 +4666,8 @@
       "$type": "AeonHacs.Components.CpwValve, AeonHacs.Core",
       "Name": "vIMC_CT",
       "Description": "IMC-CT valve",
-      "ValveState": "Opened",
-      "Position": 1135,
+      "ValveState": "Closed",
+      "Position": 1705,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4688,8 +4689,8 @@
       "$type": "AeonHacs.Components.CpwValve, AeonHacs.Core",
       "Name": "vCT_VTT",
       "Description": "CT-VTT valve",
-      "ValveState": "Opened",
-      "Position": 1145,
+      "ValveState": "Closed",
+      "Position": 1745,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4711,8 +4712,8 @@
       "$type": "AeonHacs.Components.CpwValve, AeonHacs.Core",
       "Name": "vVTT_MC",
       "Description": "VTT-MC valve",
-      "ValveState": "Opened",
-      "Position": 1150,
+      "ValveState": "Closed",
+      "Position": 1760,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -4803,8 +4804,8 @@
       "$type": "AeonHacs.Components.CpwValve, AeonHacs.Core",
       "Name": "vSplit_GMC",
       "Description": "Split-GM valve",
-      "ValveState": "Opened",
-      "Position": 1200,
+      "ValveState": "Closed",
+      "Position": 1760,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5034,13 +5035,13 @@
       "Name": "vGR9_GMR",
       "Description": "GR9-GMR valve",
       "ValveState": "Closed",
-      "Position": 1795,
+      "Position": 1780,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
         {
           "Name": "Close",
-          "Value": 1795,
+          "Value": 1780,
           "Incremental": false,
           "Configuration": "t0.8"
         },
@@ -5125,8 +5126,8 @@
       "$type": "AeonHacs.Components.CpwValve, AeonHacs.Core",
       "Name": "vGMR_GMC",
       "Description": "GMR-GMC valve",
-      "ValveState": "Opened",
-      "Position": 1100,
+      "ValveState": "Closed",
+      "Position": 1735,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5149,7 +5150,7 @@
       "Name": "vLN_CT",
       "Description": "Coil trap LN valve",
       "ValveState": "Closed",
-      "Position": 0,
+      "Position": 2000,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5178,7 +5179,7 @@
       "Name": "vLN_VTT",
       "Description": "Variable-temperature trap LN valve",
       "ValveState": "Closed",
-      "Position": 0,
+      "Position": 2000,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5219,7 +5220,7 @@
       "Name": "vLN_MC",
       "Description": "Measurement chamber LN valve",
       "ValveState": "Closed",
-      "Position": 0,
+      "Position": 2000,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5248,7 +5249,7 @@
       "Name": "vLN_GR1",
       "Description": "Graphite reactor 1 LN valve",
       "ValveState": "Closed",
-      "Position": 0,
+      "Position": 2000,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5277,7 +5278,7 @@
       "Name": "vLN_GR2",
       "Description": "Graphite reactor 2 LN valve",
       "ValveState": "Closed",
-      "Position": 0,
+      "Position": 2000,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -5306,7 +5307,7 @@
       "Name": "vLN_GR3",
       "Description": "Graphite reactor 3 LN valve",
       "ValveState": "Closed",
-      "Position": 0,
+      "Position": 2000,
       "OpenedVolumeDelta": 0.0,
       "IdleCurrentLimit": 80,
       "ActuatorOperations": [
@@ -6962,7 +6963,7 @@
       "Description": "Graphite reactor 1 furnace",
       "ThermocoupleChannel": 0,
       "PidSetup": "PID_GR1",
-      "Setpoint": 400.0,
+      "Setpoint": 580.0,
       "MinimumSetpoint": 0.0,
       "MaximumSetpoint": 600.0,
       "StopAction": "None",
@@ -6991,7 +6992,7 @@
       "Description": "Graphite reactor 2 furnace",
       "ThermocoupleChannel": 1,
       "PidSetup": "PID_GR2",
-      "Setpoint": 400.0,
+      "Setpoint": 580.0,
       "MinimumSetpoint": 0.0,
       "MaximumSetpoint": 600.0,
       "StopAction": "None",
@@ -7020,7 +7021,7 @@
       "Description": "Graphite reactor 3 furnace",
       "ThermocoupleChannel": 2,
       "PidSetup": "PID_GR3",
-      "Setpoint": 400.0,
+      "Setpoint": 580.0,
       "MinimumSetpoint": 0.0,
       "MaximumSetpoint": 600.0,
       "StopAction": "None",
@@ -7650,7 +7651,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 60.0,
@@ -7677,7 +7678,7 @@
         "FreezeTrigger": 5,
         "RaiseTrigger": 2,
         "MaximumSecondsLNFlowing": 60,
-        "MaximumMinutesToFreeze": 4,
+        "MaximumMinutesToFreeze": 10,
         "MaximumMinutesToThaw": 10,
         "SecondsToWaitAfterRaised": 5,
         "NearAirTemperature": 10.0,
@@ -7718,7 +7719,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 7.0,
@@ -7741,7 +7742,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7764,7 +7765,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7787,7 +7788,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7810,7 +7811,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7833,7 +7834,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7856,7 +7857,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7879,7 +7880,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7902,7 +7903,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7925,7 +7926,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7948,7 +7949,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7971,7 +7972,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7994,7 +7995,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -8020,15 +8021,15 @@
       "VacuumManifold": "VM",
       "MySection": "VS1All",
       "State": "Evacuate",
-      "TargetPressure": 0.005,
+      "TargetPressure": 0.0005,
       "BaselinePressure": 0.0005,
-      "GoodBackingPressure": 4.0,
+      "GoodBackingPressure": 3.5,
       "HighVacuumPreferredPressure": 7.0,
       "HighVacuumRequiredPressure": 5.0,
       "LowVacuumRequiredPressure": 8.0,
       "StateStopwatch": {
         "IsRunning": true,
-        "Accumulated": 19355
+        "Accumulated": 5365225
       },
       "IdleTimeout": 50
     }
@@ -8210,7 +8211,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP1CCQ",
       "SampleFurnace": "hIP1CCS",
-      "State": "Empty",
+      "State": "Loaded",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8234,7 +8235,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP2CCQ",
       "SampleFurnace": "hIP2CCS",
-      "State": "Empty",
+      "State": "Loaded",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8258,7 +8259,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP3CCQ",
       "SampleFurnace": "hIP3CCS",
-      "State": "Empty",
+      "State": "Loaded",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8282,7 +8283,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP4CCQ",
       "SampleFurnace": "hIP4CCS",
-      "State": "Empty",
+      "State": "Loaded",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8306,7 +8307,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP5CCQ",
       "SampleFurnace": "hIP5CCS",
-      "State": "Empty",
+      "State": "Loaded",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8330,7 +8331,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP6CCQ",
       "SampleFurnace": "hIP6CCS",
-      "State": "Empty",
+      "State": "Loaded",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8354,7 +8355,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP7CCQ",
       "SampleFurnace": "hIP7CCS",
-      "State": "Empty",
+      "State": "Complete",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8378,7 +8379,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP8CCQ",
       "SampleFurnace": "hIP8CCS",
-      "State": "Empty",
+      "State": "Loaded",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8402,7 +8403,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP9CCQ",
       "SampleFurnace": "hIP9CCS",
-      "State": "Empty",
+      "State": "Loaded",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8450,7 +8451,7 @@
       "WarmTemperature": 40,
       "QuartzFurnace": "hIP11CCQ",
       "SampleFurnace": "hIP11CCS",
-      "State": "Empty",
+      "State": "Loaded",
       "MilliLiters": 6.1574427299500645,
       "Sample": null,
       "Aliquot": 0,
@@ -8529,9 +8530,9 @@
         "IsRunning": false,
         "Accumulated": 0
       },
-      "PriorPressure": 71.2,
-      "PressurePeak": 556,
-      "MilliLiters": 2.995760981666084,
+      "PriorPressure": 279.0,
+      "PressurePeak": 1603,
+      "MilliLiters": 2.944810123472117,
       "Valve": "vGR1_GML",
       "Manometer": "pGR1",
       "Thermometer": "tGR1",
@@ -8561,9 +8562,9 @@
         "IsRunning": false,
         "Accumulated": 0
       },
-      "PriorPressure": 48.300000000000004,
-      "PressurePeak": 500,
-      "MilliLiters": 2.9786625950941996,
+      "PriorPressure": 66.7,
+      "PressurePeak": 1569,
+      "MilliLiters": 2.900084835173636,
       "Valve": "vGR2_GML",
       "Manometer": "pGR2",
       "Thermometer": "tGR2",
@@ -8593,9 +8594,9 @@
         "IsRunning": false,
         "Accumulated": 0
       },
-      "PriorPressure": 286.5,
-      "PressurePeak": 1662,
-      "MilliLiters": 3.0139611665643518,
+      "PriorPressure": 115.2,
+      "PressurePeak": 1533,
+      "MilliLiters": 2.9227922314042476,
       "Valve": "vGR3_GML",
       "Manometer": "pGR3",
       "Thermometer": "tGR3",
@@ -8606,7 +8607,7 @@
       "$type": "AeonHacs.Components.GraphiteReactor, AeonHacs.Core",
       "Name": "GR4",
       "Description": "Graphite reactor 4",
-      "State": "WaitService",
+      "State": "Prepared",
       "Size": "Standard",
       "Sample": null,
       "Aliquot": 0,
@@ -8627,7 +8628,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.051988976978128,
+      "MilliLiters": 2.900187697749574,
       "Valve": "vGR4_GML",
       "Manometer": "pGR4",
       "Thermometer": "tGR4",
@@ -8638,7 +8639,7 @@
       "$type": "AeonHacs.Components.GraphiteReactor, AeonHacs.Core",
       "Name": "GR5",
       "Description": "Graphite reactor 5",
-      "State": "WaitService",
+      "State": "Prepared",
       "Size": "Standard",
       "Sample": null,
       "Aliquot": 0,
@@ -8659,7 +8660,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 3.271863511263308,
+      "MilliLiters": 3.1745094705329633,
       "Valve": "vGR5_GML",
       "Manometer": "pGR5",
       "Thermometer": "tGR5",
@@ -8670,7 +8671,7 @@
       "$type": "AeonHacs.Components.GraphiteReactor, AeonHacs.Core",
       "Name": "GR6",
       "Description": "Graphite reactor 6",
-      "State": "WaitService",
+      "State": "Prepared",
       "Size": "Standard",
       "Sample": null,
       "Aliquot": 0,
@@ -8691,7 +8692,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 2.990279056263684,
+      "MilliLiters": 2.8916973397733363,
       "Valve": "vGR6_GML",
       "Manometer": "pGR6",
       "Thermometer": "tGR6",
@@ -8702,7 +8703,7 @@
       "$type": "AeonHacs.Components.GraphiteReactor, AeonHacs.Core",
       "Name": "GR7",
       "Description": "Graphite reactor 7",
-      "State": "WaitService",
+      "State": "Prepared",
       "Size": "Standard",
       "Sample": null,
       "Aliquot": 0,
@@ -8723,7 +8724,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 2.9661523591499157,
+      "MilliLiters": 2.9056348758825368,
       "Valve": "vGR7_GMR",
       "Manometer": "pGR7",
       "Thermometer": "tGR7",
@@ -8734,7 +8735,7 @@
       "$type": "AeonHacs.Components.GraphiteReactor, AeonHacs.Core",
       "Name": "GR8",
       "Description": "Graphite reactor 8",
-      "State": "WaitService",
+      "State": "Prepared",
       "Size": "Standard",
       "Sample": null,
       "Aliquot": 0,
@@ -8755,7 +8756,7 @@
       },
       "PriorPressure": 0.0,
       "PressurePeak": 1250,
-      "MilliLiters": 2.9762277068495573,
+      "MilliLiters": 2.8469168930233506,
       "Valve": "vGR8_GMR",
       "Manometer": "pGR8",
       "Thermometer": "tGR8",
@@ -8798,7 +8799,7 @@
       "$type": "AeonHacs.Components.GraphiteReactor, AeonHacs.Core",
       "Name": "GR10",
       "Description": "Graphite reactor 10",
-      "State": "WaitService",
+      "State": "Prepared",
       "Size": "Standard",
       "Sample": null,
       "Aliquot": 0,
@@ -8830,10 +8831,10 @@
       "$type": "AeonHacs.Components.GraphiteReactor, AeonHacs.Core",
       "Name": "GR11",
       "Description": "Graphite reactor 11",
-      "State": "WaitService",
+      "State": "Prepared",
       "Size": "Standard",
       "Sample": null,
-      "Aliquot": 1,
+      "Aliquot": 0,
       "GraphitizingTemperature": 580,
       "SampleTemperatureOffset": 0,
       "SampleSetpoint": 580.0,
@@ -8862,7 +8863,7 @@
       "$type": "AeonHacs.Components.GraphiteReactor, AeonHacs.Core",
       "Name": "GR12",
       "Description": "Graphite reactor 12",
-      "State": "WaitService",
+      "State": "Prepared",
       "Size": "Standard",
       "Sample": null,
       "Aliquot": 0,
@@ -11419,7 +11420,8 @@
       "ArchiveDaily": false
     }
   },
-  "Samples": {},
+  "Samples": {
+  },
   "HacsComponents": {
     "IpFan1": {
       "$type": "AeonHacs.Components.IpFan, AeonHacs.Core",
@@ -11499,11 +11501,11 @@
     "Description": "System settings, constants and default parameters",
     "EnableWatchdogs": true,
     "EnableAutozero": true,
-    "PriorGR": "GR12",
+    "PriorGR": "GR3",
     "NextGraphiteNumber": 1,
     "DefaultMassUnits": "mg",
     "Take13CDefault": false,
-    "SampleCounter": 0,
+    "SampleCounter": 760,
     "MaximumAliquotsPerSample": 3,
     "EnableSmallReactors": false,
     "UpdateIntervalMilliseconds": 50,
@@ -11523,16 +11525,6 @@
         "ParameterName": "HoldSampleAtPorts",
         "Value": "NaN",
         "Description": "Set GR and d13C FTCs to Standby and hold to start reactions later."
-      },
-      {
-        "ParameterName": "MaximumSampleTemperature",
-        "Value": "NaN",
-        "Description": "End of reaction temperature."
-      },
-      {
-        "ParameterName": "MinutesAtMaximumTemperature",
-        "Value": 10.0,
-        "Description": "Stop collecting after this many minutes at the maximum temperature."
       },
       {
         "ParameterName": "PressureOverAtm",
@@ -11706,7 +11698,7 @@
       },
       {
         "ParameterName": "MaximumSampleMicrogramsCarbon",
-        "Value": 1100.0,
+        "Value": 1150.0,
         "Description": "Discard CO2 splits as long as the sample contains more than this much carbon."
       },
       {
