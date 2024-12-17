@@ -1980,29 +1980,70 @@
         "Name": "",
         "Operations": [
           {
-            "$type": "AeonHacs.Utilities.OperationSet, AeonHacs.Core",
+            "$type": "AeonHacs.PchipInterpolator, AeonHacs.Core",
             "Name": "VoltageCorrection",
-            "Operations": [
+            "CalibrationData": [
               {
-                "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
-                "Name": "Zero Offset",
-                "Argument": "x-1"
+                "Item1": 0.9967,
+                "Item2": 1.0000,
               },
               {
-                "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
-                "Name": "VRef Correction",
-                "Argument": "x+1"
+                "Item1": 1.7686,
+                "Item2": 1.6042,
               },
               {
-                "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
-                "Name": "Gain",
-                "Argument": "x*1"
+                "Item1": 2.1644,
+                "Item2": 1.9053,
+              },
+              {
+                "Item1": 2.3096,
+                "Item2": 2.0334,
+              },
+              {
+                "Item1": 2.5132,
+                "Item2": 2.2945,
+              },
+              {
+                "Item1": 2.6561,
+                "Item2": 2.5465,
+              },
+              {
+                "Item1": 2.8182,
+                "Item2": 2.9090,
+              },
+              {
+                "Item1": 2.8370,
+                "Item2": 3.0253,
+              },
+              {
+                "Item1": 5.8000,
+                "Item2": 5.8692,
+              },
+              {
+                "Item1": 6.8260,
+                "Item2": 6.9057,
+              },
+              {
+                "Item1": 7.2890,
+                "Item2": 7.3775,
+              },
+              {
+                "Item1": 7.5480,
+                "Item2": 7.6724,
+              },
+              {
+                "Item1": 7.8966,
+                "Item2": 7.9739,
+              },
+              {
+                "Item1": 8.8088,
+                "Item2": 8.8865,
               }
             ]
           },
           {
             "$type": "AeonHacs.Utilities.OperationSet, AeonHacs.Core",
-            "Name": "ValueConversion",
+            "Name": "TransferFunction",
             "Operations": [
               {
                 "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
@@ -5191,13 +5232,13 @@
         },
         {
           "Name": "ColdTrickle",
-          "Value": 1340,
+          "Value": 1325,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "WarmTrickle",
-          "Value": 1350,
+          "Value": 1325,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -7690,12 +7731,12 @@
       "TopThermometer": "tVTC_top",
       "WireThermometer": "tVTC_wire",
       "WireTemperatureLimit": 65,
-      "MaximumHeaterPower": 8.0,
+      "MaximumHeaterPower": 13.0,
       "HeaterPid": "VtcCold",
       "MaximumWarmHeaterPower": 4.0,
       "WarmHeaterPid": "VtcWarm",
       "ColdTemperature": -170,
-      "MaximumMinutesToFreeze": 8,
+      "MaximumMinutesToFreeze": 15,
       "MaximumMinutesToThaw": 10,
       "CleanupTemperature": 50,
       "HeaterOnTrickle": "WarmTrickle",
