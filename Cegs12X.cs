@@ -77,6 +77,10 @@ public partial class Cegs12X : Cegs
         Separators.Add(ProcessDictionary.Count);
 
         // Granular inlet port & sample process control
+        ProcessDictionary["Freeze the Inlet Port"] = FreezeIp;
+        ProcessDictionary["Raise LN on the Inlet Port"] = RaiseLNIp;
+        ProcessDictionary["Thaw the Inlet Port"] = ThawIp;
+        ProcessDictionary["Raise IP furnaces"] = RaiseIpFurnaces;
         ProcessDictionary["Turn on quartz furnace"] = TurnOnIpQuartzFurnace;
         ProcessDictionary["Turn off quartz furnace"] = TurnOffIpQuartzFurnace;
         ProcessDictionary["Disable sample setpoint ramping"] = DisableIpRamp;
