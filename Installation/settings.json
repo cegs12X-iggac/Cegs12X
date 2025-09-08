@@ -554,6 +554,146 @@
         "GR furnaces are lowered",
         "GR FTCs are raised"
       ]
+    },
+    "Prepare volatile organic": {
+      "Name": "Prepare volatile organic",
+      "Description": "",
+      "PortType": "Combustion",
+      "Steps": [
+        {
+          "Name": "Freeze the Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Flush Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Admit O2 into Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Thaw the Inlet Port",
+          "Description": ""
+        },
+        {
+          "Name": "Reset Sample and Inlet Port to Loaded",
+          "Description": ""
+        }
+      ],
+      "CheckList": [
+        "Inlet port furnaces are lowered."
+      ]
+    },
+    "Process volatile organic": {
+      "Name": "Process volatile organic",
+      "Description": "",
+      "PortType": "Combustion",
+      "Steps": [
+        {
+          "Name": "Heat Quartz and Open Line",
+          "Description": ""
+        },
+        {
+          "Name": "Enable sample setpoint ramping",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpRampRate",
+          "Description": "The target rate-of-change when raising the Inlet Port sample furnace's temperature.",
+          "Value": 30.0
+        },
+        {
+          "Name": "Adjust sample ramp rate",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpSetpoint",
+          "Description": "The Inlet Port sample furnace's target setpoint (the final setpoint when ramping).",
+          "Value": 150.0
+        },
+        {
+          "Name": "Adjust sample setpoint",
+          "Description": ""
+        },
+        {
+          "Name": "Turn on sample furnace",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpTemperatureCushion",
+          "Description": "The acceptable range around IpSetpoint considered at temperature.",
+          "Value": 1.0
+        },
+        {
+          "Name": "Wait for sample to rise to setpoint",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpRampRate",
+          "Description": "The target rate-of-change when raising the Inlet Port sample furnace's temperature.",
+          "Value": 20.0
+        },
+        {
+          "Name": "Adjust sample ramp rate",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpSetpoint",
+          "Description": "The Inlet Port sample furnace's target setpoint (the final setpoint when ramping).",
+          "Value": 625.0
+        },
+        {
+          "Name": "Adjust sample setpoint",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpTemperatureCushion",
+          "Description": "The acceptable range around IpSetpoint considered at temperature.",
+          "Value": 10.0
+        },
+        {
+          "Name": "Wait for sample to rise to setpoint",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpMinutes",
+          "Description": "Set time for the IP Timer.",
+          "Value": 10.0
+        },
+        {
+          "Name": "Wait for IP timer",
+          "Description": ""
+        },
+        {
+          "Name": "Turn off IP furnaces",
+          "Description": ""
+        },
+        {
+          "Name": "Disable sample setpoint ramping",
+          "Description": ""
+        },
+        {
+          "Name": "Collect, etc.",
+          "Description": ""
+        },
+        {
+          "Name": "Open and evacuate line",
+          "Description": ""
+        }
+      ],
+      "CheckList": [
+        "Inlet port furnaces are raised",
+        "Graphite furnaces are lowered",
+        "GR FTCs are raised"
+      ]
     }
   },
   "Description": "Carbon extraction and graphitization system, 12 GRs, 12 inlet ports",
@@ -7861,7 +8001,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "CalibratedKnownVolume",
       "Description": "Known volume used for calibrating chambers",
-      "MilliLiters": 30.694,
+      "MilliLiters": 23.773,
       "Manometer": null,
       "Thermometer": null,
       "Heater": null,
@@ -9892,12 +10032,13 @@
       "SourceValve": "vH2_VM",
       "FlowValve": "vH2Flow",
       "Meter": "pGM",
-      "SecondsSettlingTime": 3.0,
+      "SecondsSettlingTime": 2.0,
       "FlowManager": "H2.GMFlowManager",
       "Destination": "GM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 180
     },
     "H2.GML": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9942,7 +10083,8 @@
       "Destination": "GM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 180
     },
     "He.GML": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9987,7 +10129,8 @@
       "Destination": "IM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 20
     },
     "He.IML": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10032,7 +10175,8 @@
       "Destination": "MC",
       "Path": "VM_Split",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 180
     },
     "He.MCA": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10047,7 +10191,8 @@
       "Destination": "MCA",
       "Path": "VM_Split",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 180
     },
     "He.MCA_GMC": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10062,7 +10207,8 @@
       "Destination": "MCA_GMC",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 180
     },
     "He.MC_GM": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10077,7 +10223,8 @@
       "Destination": "MC_GM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 180
     },
     "He.MCA_GM": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10092,7 +10239,8 @@
       "Destination": "MCA_GM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 180
     },
     "CO2.MC": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10107,52 +10255,56 @@
       "Destination": "MC",
       "Path": "VM_Split",
       "PurgePressure": 3.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 180
     },
     "O2.IM": {
-      "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
-      "Name": "O2.IM",
-      "Description": "Oxygen gas supply for Inlet manifold",
-      "GasName": "O2",
-      "SourceValve": "vO2_VM",
-      "FlowValve": null,
-      "Meter": "pIM",
-      "SecondsSettlingTime": 0.9,
-      "FlowManager": null,
-      "Destination": "IM",
-      "Path": "VM",
-      "PurgePressure": 100.0,
-      "SecondsToPurge": 1
+        "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
+        "Name": "O2.IM",
+        "Description": "Oxygen gas supply for Inlet manifold",
+        "GasName": "O2",
+        "SourceValve": "vO2_VM",
+        "FlowValve": null,
+        "Meter": "pIM",
+        "SecondsSettlingTime": 0.9,
+        "FlowManager": null,
+        "Destination": "IM",
+        "Path": "VM",
+        "PurgePressure": 100.0,
+        "SecondsToPurge": 1,
+        "SecondsToPressurize": 20
     },
     "O2.IML": {
-      "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
-      "Name": "O2.IML",
-      "Description": "Oxygen gas supply for Inlet manifold left",
-      "GasName": "O2",
-      "SourceValve": "vO2_VM",
-      "FlowValve": null,
-      "Meter": "pIM",
-      "SecondsSettlingTime": 0.9,
-      "FlowManager": null,
-      "Destination": "IML_IMC",
-      "Path": "VM",
-      "PurgePressure": 100.0,
-      "SecondsToPurge": 1
+        "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
+        "Name": "O2.IML",
+        "Description": "Oxygen gas supply for Inlet manifold left",
+        "GasName": "O2",
+        "SourceValve": "vO2_VM",
+        "FlowValve": null,
+        "Meter": "pIM",
+        "SecondsSettlingTime": 0.9,
+        "FlowManager": null,
+        "Destination": "IML_IMC",
+        "Path": "VM",
+        "PurgePressure": 100.0,
+        "SecondsToPurge": 1,
+        "SecondsToPressurize": 20
     },
     "O2.IMR": {
-      "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
-      "Name": "O2.IMR",
-      "Description": "Oxygen gas supply for Inlet manifold right",
-      "GasName": "O2",
-      "SourceValve": "vO2_VM",
-      "FlowValve": null,
-      "Meter": "pIM",
-      "SecondsSettlingTime": 0.9,
-      "FlowManager": null,
-      "Destination": "IMR_IMC",
-      "Path": "VM",
-      "PurgePressure": 100.0,
-      "SecondsToPurge": 1
+        "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
+        "Name": "O2.IMR",
+        "Description": "Oxygen gas supply for Inlet manifold right",
+        "GasName": "O2",
+        "SourceValve": "vO2_VM",
+        "FlowValve": null,
+        "Meter": "pIM",
+        "SecondsSettlingTime": 0.9,
+        "FlowManager": null,
+        "Destination": "IMR_IMC",
+        "Path": "VM",
+        "PurgePressure": 100.0,
+        "SecondsToPurge": 1,
+        "SecondsToPressurize": 20
     }
   },
   "FlowManagers": {
@@ -11307,6 +11459,14 @@
       "Description": "Alert manager",
       "AlertsEnabled": true,
       "DuplicateMessageSuppressionDuration": "1.00:00:00"
+    },
+    "IpOvenRamper": {
+      "$type": "AeonHacs.Components.OvenRamper, AeonHacs.Core",
+      "Name": "IpOvenRamper",
+      "Description": "",
+      "RateDegreesPerMinute": 20.0,
+      "IdleTimeout": 500,
+      "LogEverything": false
     }
   },
   "CegsPreferences": {
@@ -11336,7 +11496,7 @@
     "DefaultParameters": [
       {
         "ParameterName": "CO2TransferMinutes",
-        "Value": 1.0,
+        "Value": 1.5,
         "Description": "Time to wait for CO2 transfer between chambers."
       },
       {
